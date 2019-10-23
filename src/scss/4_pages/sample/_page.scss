@@ -1,0 +1,181 @@
+@charset "utf-8";
+
+.fw_seminar_schedule {
+// ---------------------------------------------------------------------------
+//
+// /sample/page.html
+//
+// ---------------------------------------------------------------------------
+  .p-schedule {
+    background: $color_background !important;
+    width: 1280px;
+    margin: 0 -190px;
+    &__inner {
+      max-width: 900px;
+      @include mg(0 auto);
+      @include pd(50px 0);
+    }
+
+    &__title {
+      @include fontSize(36px);
+      text-align: center;
+      color: $color_main;
+      font-weight: bold;
+      @include mb(20px);
+    }
+
+    &__subtitle {
+      @include fontSize(24px);
+      text-align: center;
+      color: $color_main;
+    }
+
+    &__box {
+      border: 3px solid $color_main;
+      @include mt(40px);
+      
+      &__title {
+        color: #fff;
+        background-color: $color_main;
+        text-align: center;
+        @include fontSize(20px);
+        @include pd(10px 0);
+      }
+
+      &__data {
+        background-color: #fff;
+        @include pd(30px);
+      }
+    }
+
+    &__highlight-text {
+      @include fontSize(20px);
+      font-weight: bold;
+      color: $color_main;
+      text-align: center;
+      
+      span {
+        background-color: #ffff00;
+      }
+    }
+
+    &__teacher {
+      @include flexBase( $wrap: "wrap", $direction: "row", $justify: "flex-start", $align: "stretch" );
+      @include mt(30px);
+
+      &__photo {
+        flex: 0 0 230px;
+      }
+
+      &__text {
+        flex: 1;
+        @include pl(20px);
+        color: $color_main;
+      }
+
+      &__title {
+        @include fontSize(20px);
+        @include pb(10px);
+        @include mb(10px);
+        font-weight: bold;
+        border-bottom: 1px solid $color_main;
+      }
+
+      &__name {
+        @include fontSize(18px);
+      }
+
+      &__status-list {
+        @include flexBase( $wrap: "wrap", $direction: "row", $justify: "flex-start", $align: "center" );
+      }
+
+      &__status-item {
+        display: inline-block;
+        @include fontSize(12px);
+        &::before {
+          content: '【';
+        }
+        &::after {
+          content: '】';
+        }
+      }
+
+      &__introduction {
+        border-top: 2px dotted $color_main;
+        border-bottom: 2px dotted $color_main;
+        @include fontSize(12px);
+        line-height: 1.8;
+        @include pd(10px 0);
+        @include mg(10px 0 20px);
+      }
+
+      &__others-list {
+        @include flexBase( $wrap: "wrap", $direction: "row", $justify: "space-between", $align: "stretch" );
+      }
+
+      &__others-item {
+        flex: 0 0 49%;
+
+        &__title {
+          background-color: $color_background;
+          text-align: center;
+          @include fontSize(12px);
+          @include mb(10px);
+        }
+
+        &__box {
+          @include flexBase( $wrap: "wrap", $direction: "row", $justify: "space-between", $align: "stretch" );
+
+          &__text {
+            @include fontSize(12px);
+            line-height: 1.8;
+          }
+        }
+      }
+
+    }
+
+    &__message {
+      border: 3px solid $red;
+      @include pd(20px);
+      @include fontSize(16px);
+      color: $red;
+      text-align: center;
+      @include mg(30px 0);
+    }
+
+    &__talk {
+      background-color: $color_background;
+      @include pd(20px);
+      @include flexBase( $wrap: "wrap", $direction: "row", $justify: "flex-start", $align: "stretch" );
+
+      &__image {
+        flex: 1;
+      }
+
+      &__text {
+        flex: 0 0 400px;
+        @include pd(0 20px);
+      }
+
+      &__title {
+        @include fontSize(16px);
+        @include mb(10px);
+        text-align: center;
+        color: $color_main;
+      }
+
+      &__description {
+        @include fontSize(14px);
+        color: $red;
+        border: 2px solid $red;
+        @include pd(10px);
+        line-height: 1.8;
+      }
+    }
+
+  } // p-schedule
+
+
+}//.fw
+

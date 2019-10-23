@@ -1,0 +1,1 @@
+console.log("hi!! fw_seminar_schedule!!");
