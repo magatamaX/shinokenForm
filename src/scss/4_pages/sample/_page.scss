@@ -64,7 +64,7 @@
       @include mt(30px);
 
       &__photo {
-        flex: 0 0 230px;
+        flex: 0 0 290px;
       }
 
       &__text {
@@ -114,7 +114,7 @@
       }
 
       &__others-item {
-        flex: 0 0 49%;
+        flex: 0 0 48%;
 
         &__title {
           background-color: $color_background;
@@ -129,6 +129,16 @@
           &__text {
             @include fontSize(12px);
             line-height: 1.8;
+          }
+
+          &__image {
+            &--book {
+              flex: 0 0 80px;
+              @include pr(20px);
+            }
+            &--tv {
+              flex: 0 0 110px;
+            }
           }
         }
       }
