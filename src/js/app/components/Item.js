@@ -1,6 +1,7 @@
 import React from "react";
 import moment from "moment";
 import styled from "styled-components";
+import { mq } from "../constants";
 
 const day_ja = ["日", "月", "火", "水", "木", "金", "土"];
 
@@ -9,7 +10,6 @@ const Item = ({ date, start, end, special }) => {
   const dayStr = day_ja[moment(date).format("d")];
   const today = moment(new Date()).format("YYYYMMDD");
   const isFinished = Number(date) < Number(today);
-  console.log("special", special);
   return (
     <Li key={date}>
       <Day>{dateStr}</Day>（{dayStr}）{start}
@@ -30,19 +30,31 @@ const Item = ({ date, start, end, special }) => {
 const Li = styled.li`
   font-size: 18px;
   margin-bottom: 10px;
-  padding-left: 10px;
+  text-align: center;
   position: relative;
   z-index: 0;
+  ${mq} {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
 `;
 const Day = styled.span`
   font-size: 24px;
   font-weight: bold;
   width: 3.5em;
   display: inline-block;
+  text-align: left;
+  ${mq} {
+    font-size: 16px;
+  }
 `;
 const Small = styled.span`
   font-size: 14px;
   margin: 0 5px;
+  ${mq} {
+    font-size: 10px;
+    margin: 0 2.5px;
+  }
 `;
 const Line = styled.div`
   width: 100%;
@@ -63,6 +75,9 @@ const EndIcon = styled.div`
   top: 50%;
   right: 0;
   transform: translateY(-50%);
+  ${mq} {
+    font-size: 12px;
+  }
 `;
 const SpecialMarker = styled.div`
   position: absolute;

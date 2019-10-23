@@ -8,11 +8,11 @@
 // ---------------------------------------------------------------------------
   .p-schedule {
     background: $color_background !important;
-    width: 1280px;
-    margin: 0 -190px;
+    @include width(1280px, auto);
+    @include mg(0 -190px, 0);
     &__inner {
       max-width: 900px;
-      @include mg(0 auto);
+      @include mg(0 auto, 0 20px);
       @include pd(50px 0);
     }
 
@@ -44,7 +44,7 @@
 
       &__data {
         background-color: #fff;
-        @include pd(30px);
+        @include pd(30px, 15px);
       }
     }
 
@@ -65,11 +65,15 @@
 
       &__photo {
         flex: 0 0 290px;
+        @include max(s) {
+          flex: 0 0 100%;
+          padding: 0 30px 30px;
+        }
       }
 
       &__text {
         flex: 1;
-        @include pl(20px);
+        @include pl(20px, 0);
         color: $color_main;
       }
 
@@ -127,17 +131,24 @@
           @include flexBase( $wrap: "wrap", $direction: "row", $justify: "space-between", $align: "stretch" );
 
           &__text {
-            @include fontSize(12px);
+            @include fontSize(12px, 11px);
             line-height: 1.8;
+            flex: 1;
           }
 
           &__image {
             &--book {
               flex: 0 0 80px;
-              @include pr(20px);
+              @include pr(20px, 0);
+              @include max(s) {
+                flex: 0 0 20%;
+              }
             }
             &--tv {
               flex: 0 0 110px;
+              @include max(s) {
+                flex: 0 0 35%;
+              }
             }
           }
         }
@@ -152,6 +163,11 @@
       color: $red;
       text-align: center;
       @include mg(30px 0);
+      @include max(s) {
+        br {
+          display: none;
+        }
+      }
     }
 
     &__talk {
@@ -161,11 +177,18 @@
 
       &__image {
         flex: 1;
+        @include max(s) {
+          flex: 0 0 100%;
+          text-align: center;
+        }
       }
 
       &__text {
         flex: 0 0 400px;
-        @include pd(0 20px);
+        @include pd(0 20px, 20px);
+        @include max(s) {
+          flex: 0 0 100%;
+        }
       }
 
       &__title {

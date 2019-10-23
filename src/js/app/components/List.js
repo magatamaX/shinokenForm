@@ -2,6 +2,7 @@ import React from "react";
 import moment from "moment";
 import styled from "styled-components";
 import Item from "../components/Item";
+import { mq } from "../constants";
 
 const List = ({ month, list }) => {
   return (
@@ -28,10 +29,16 @@ const Title = styled.dt`
   text-align: center;
   line-height: 1;
   border-radius: 100px;
+  ${mq} {
+    font-size: 14px;
+  }
 `;
 
 const Data = styled.dd`
   margin-top: 20px;
+  ${mq} {
+    margin-top: 10px;
+  }
 `;
 
 const Ul = styled.ul``;

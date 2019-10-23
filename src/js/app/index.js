@@ -51,7 +51,9 @@ const App = () => {
         })}
       </Root>
       <Note>
-        セミナー内容は、予告なく変更する場合があります。ご了承ください。
+        セミナー内容は、予告なく変更する場合があります。
+        <br />
+        ご了承ください。
       </Note>
     </>
   );
@@ -60,6 +62,7 @@ const App = () => {
 const Root = styled.div`
   margin-top: 20px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
   align-items: stretch;
@@ -67,6 +70,7 @@ const Root = styled.div`
     flex: 0 0 49%;
     ${mq} {
       flex: 0 0 100%;
+      margin-bottom: 20px;
     }
   }
 `;
@@ -82,6 +86,16 @@ const Note = styled.p`
   font-size: 10px;
   margin-top: 20px;
   text-align: right;
+  br {
+    display: none;
+  }
+  ${mq} {
+    margin-top: 0;
+    text-align: left;
+    br {
+      display: inline;
+    }
+  }
 `;
 
 export default App;
