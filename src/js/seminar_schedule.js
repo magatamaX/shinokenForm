@@ -3,4 +3,5 @@ import ReactDOM from "react-dom";
 import App from "./app";
 
 const target = document.getElementById("seminarScheduleTable");
-ReactDOM.render(<App />, target);
+const jsonPath = target.getAttribute("data-json-path");
+ReactDOM.render(<App jsonPath={jsonPath} />, target);

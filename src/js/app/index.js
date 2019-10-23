@@ -5,13 +5,13 @@ import styled from "styled-components";
 import List from "./components/List";
 import { mq } from "./constants";
 
-const App = () => {
+const App = ({ jsonPath }) => {
   const [schedule, setSchedule] = useState(null);
   const [error, setError] = useState("");
 
   useEffect(() => {
     axios
-      .get("./json/seminar_schedule.json")
+      .get(jsonPath)
       .then(({ data }) => {
         if (!Array.isArray(data)) {
           setError("不正なデータです。");
@@ -34,6 +34,18 @@ const App = () => {
         setError(e.message);
       });
   }, []);
+
+  useEffect(() => {
+    if (!!schedule) {
+      const months = Object.keys(schedule);
+      const startMonthStr = moment(months[0]).format("YYYY年M月");
+      const endMonthStr = moment(months[months.length - 1]).format("YYYY年M月");
+      const targetDom = document.getElementById("seminarPeriod");
+      if (targetDom) {
+        targetDom.textContent = `${startMonthStr}～${endMonthStr}`;
+      }
+    }
+  }, [schedule]);
 
   if (!!error) {
     return <Error>日程を表示できません。{error}</Error>;

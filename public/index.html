@@ -186,7 +186,7 @@ var google_remarketing_only = false;
             <div class="p-schedule__inner">
 
                 <h2 class="p-schedule__title">セミナー開催概要</h2>
-                <p class="p-schedule__subtitle">不動産投資セミナー <span class="js-schedule-day"></span>開催予定</p>
+                <p class="p-schedule__subtitle">不動産投資セミナー <span id="seminarPeriod"></span>開催予定</p>
 
                 <dl class="p-schedule__box">
                     <dt class="p-schedule__box__title">東京開催概要</dt>
@@ -239,7 +239,11 @@ var google_remarketing_only = false;
                             <div class="p-schedule__talk__image"><img src="./images/voice_img02.jpg" alt=""></div>
                         </div>
 
-                        <div id="seminarScheduleTable" class="p-schedule__table"></div>
+                        <div
+                            id="seminarScheduleTable"
+                            class="p-schedule__table"
+                            data-json-path="./json/seminar_schedule.json"
+                        ></div>
 
                     </dd>
                 </dl>
