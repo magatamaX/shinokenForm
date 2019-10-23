@@ -13,7 +13,6 @@ MVの画像をデバイスフォント化したく、
 データをおわたしいただけますと！
 
 ■素材
-https://www.dropbox.com/sh/bydq56ujgan9xru/AADSDLJf4mdXqCenQbxCDqYQa?dl=0
 
 ■スケジュール
 10/23水｜テストアップ（データ共有）
