@@ -11,14 +11,14 @@ const App = ({ jsonPath }) => {
 
   useEffect(() => {
     axios
-      .get(jsonPath)
-      .then(({ data }) => {
-        if (!Array.isArray(data)) {
+      .get(jsonPath, { responseType: "json" })
+      .then(res => {
+        if (!Array.isArray(res.data)) {
           setError("不正なデータです。");
           return;
         }
 
-        const dataForState = data.reduce((newData, day) => {
+        const dataForState = res.data.reduce((newData, day) => {
           const month = moment(day.date).format("YYYYMM01");
           if (!newData[month]) {
             newData[month] = [day];
