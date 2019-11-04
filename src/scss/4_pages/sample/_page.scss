@@ -156,6 +156,7 @@
 
     }
 
+    // p-schedule__message
     &__message {
       border: 3px solid $red;
       @include pd(20px);
@@ -170,6 +171,7 @@
       }
     }
 
+    // p-schedule__talk
     &__talk {
       background-color: $color_background;
       @include pd(20px);
@@ -204,6 +206,131 @@
         border: 2px solid $red;
         @include pd(10px);
         line-height: 1.8;
+      }
+    }
+
+    // p-schedule__request
+    &__request {
+      @include mg(40px 0 60px, 40px 0);
+
+      &__text {
+        @include fontSize(18px, 16px);
+        text-align: center;
+        color: $color_main;
+        font-weight: bold;
+
+        @include max(s) {
+          text-align: left;
+        }
+      }
+    }
+
+    // p-schedule__info
+    &__info {
+      border: 3px solid $color_main;
+      background-color: #fff;
+      position: relative;
+
+      &__inner {
+        @include pd(30px, 20px);
+      }
+
+      &__title-bar {
+        @include fontSize(18px, 16px);
+        color: #fff;
+        background-color: $color_main;
+        text-align: center;
+        @include pd(8px 0);
+      }
+
+      &__message {
+        background-color: $color_background;
+        color: $color_main;
+        @include fontSize(18px, 16px);
+        @include pd(20px);
+        @include mb(10px);
+        text-align: center;
+        line-height: 1.6;
+
+        @include max(s) {
+          text-align: left;
+        }
+
+        .red {
+          color: red;
+          @include fontSize(16px, 14px);
+        }
+      }
+
+      @include triangle($color: $color_main, $width:120, $height:40, $direction:bottom);
+      &::before {
+        transform: translateY(-40%);
+      }
+    }
+
+    // p-schedule__access
+    &__access {
+      background-color: $color_background;
+      @include pd(30px, 20px);
+      @include flexBase( $wrap: "wrap", $direction: "row", $justify: "flex-start", $align: "stretch" );
+
+      &__title {
+        flex: 0 0 100px;
+        background-color: $black80;
+        color: #fff;
+        text-align: center;
+        @include flexBase( $wrap: "nowrap", $direction: "column", $justify: "center", $align: "center" );
+
+        @include max(s) {
+          flex: 0 0 100%;
+        }
+      }
+
+      &__data {
+        @include pl(20px, 0);
+        @include pt(0, 10px);
+        color: $color_main;
+      }
+
+      &__address {
+        @include fontSize(20px, 16px);
+        @include mb(10px);
+        line-height: 1.6;
+      }
+
+      &__guide {
+        @include fontSize(16px, 12px);
+        line-height: 1.6;
+      }
+    }
+
+
+    // p-schedule__button {
+    &__button {
+      @include mt(30px, 20px);
+      text-align: center;
+      a {
+        display: block;
+        @include mg(0 auto);
+        background-color: $color_main;
+        color: #fff;
+        @include fontSize(20px, 16px);
+        @include pd(25px 0, 20px 0);
+        line-height: 1;
+        max-width: 500px;
+        text-decoration: none;
+        border-radius: 4px;
+        box-shadow: 0 3px 0 #a6c3d6;
+        transition: 0.2s;
+        &:hover {
+          opacity: .7;
+        }
+      }
+
+      &--orange {
+        a {
+          background-color: $color_sub;
+        }
       }
     }
 

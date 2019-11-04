@@ -256,6 +256,160 @@
   line-height: 1.8;
 }
 
+.fw_seminar_schedule .p-schedule__request {
+  margin: 40px 0 60px;
+}
+
+.fw_seminar_schedule .p-schedule__request__text {
+  font-size: 18px;
+  text-align: center;
+  color: #005bac;
+  font-weight: bold;
+}
+
+.fw_seminar_schedule .p-schedule__info {
+  border: 3px solid #005bac;
+  background-color: #fff;
+  position: relative;
+  position: relative;
+}
+
+.fw_seminar_schedule .p-schedule__info__inner {
+  padding: 30px;
+}
+
+.fw_seminar_schedule .p-schedule__info__title-bar {
+  font-size: 18px;
+  color: #fff;
+  background-color: #005bac;
+  text-align: center;
+  padding: 8px 0;
+}
+
+.fw_seminar_schedule .p-schedule__info__message {
+  background-color: #e5eef7;
+  color: #005bac;
+  font-size: 18px;
+  padding: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.fw_seminar_schedule .p-schedule__info__message .red {
+  color: red;
+  font-size: 16px;
+}
+
+.fw_seminar_schedule .p-schedule__info:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.fw_seminar_schedule .p-schedule__info:before {
+  margin-left: -60px;
+  left: 50%;
+  bottom: -40px;
+  border-top: 40px solid #005bac;
+  border-right: 60px solid transparent !important;
+  border-left: 60px solid transparent !important;
+}
+
+.fw_seminar_schedule .p-schedule__info::before {
+  -webkit-transform: translateY(-40%);
+          transform: translateY(-40%);
+}
+
+.fw_seminar_schedule .p-schedule__access {
+  background-color: #e5eef7;
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.fw_seminar_schedule .p-schedule__access__title {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100px;
+          flex: 0 0 100px;
+  background-color: #504f4f;
+  color: #fff;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.fw_seminar_schedule .p-schedule__access__data {
+  padding-left: 20px;
+  padding-top: 0;
+  color: #005bac;
+}
+
+.fw_seminar_schedule .p-schedule__access__address {
+  font-size: 20px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.fw_seminar_schedule .p-schedule__access__guide {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.fw_seminar_schedule .p-schedule__button {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.fw_seminar_schedule .p-schedule__button a {
+  display: block;
+  margin: 0 auto;
+  background-color: #005bac;
+  color: #fff;
+  font-size: 20px;
+  padding: 25px 0;
+  line-height: 1;
+  max-width: 500px;
+  text-decoration: none;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 3px 0 #a6c3d6;
+          box-shadow: 0 3px 0 #a6c3d6;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.fw_seminar_schedule .p-schedule__button a:hover {
+  opacity: .7;
+}
+
+.fw_seminar_schedule .p-schedule__button--orange a {
+  background-color: #eb6100;
+}
+
 @media screen and (max-width: 768px) {
   .fw_seminar_schedule .p-schedule {
     width: auto;
@@ -310,5 +464,58 @@
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
+  }
+  .fw_seminar_schedule .p-schedule__request {
+    margin: 40px 0;
+  }
+  .fw_seminar_schedule .p-schedule__request__text {
+    font-size: 16px;
+  }
+  .fw_seminar_schedule .p-schedule__request__text {
+    text-align: left;
+  }
+  .fw_seminar_schedule .p-schedule__info__inner {
+    padding: 20px;
+  }
+  .fw_seminar_schedule .p-schedule__info__title-bar {
+    font-size: 16px;
+  }
+  .fw_seminar_schedule .p-schedule__info__message {
+    font-size: 16px;
+  }
+  .fw_seminar_schedule .p-schedule__info__message {
+    text-align: left;
+  }
+  .fw_seminar_schedule .p-schedule__info__message .red {
+    font-size: 14px;
+  }
+  .fw_seminar_schedule .p-schedule__access {
+    padding: 20px;
+  }
+  .fw_seminar_schedule .p-schedule__access__title {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+  .fw_seminar_schedule .p-schedule__access__data {
+    padding-left: 0;
+  }
+  .fw_seminar_schedule .p-schedule__access__data {
+    padding-top: 10px;
+  }
+  .fw_seminar_schedule .p-schedule__access__address {
+    font-size: 16px;
+  }
+  .fw_seminar_schedule .p-schedule__access__guide {
+    font-size: 12px;
+  }
+  .fw_seminar_schedule .p-schedule__button {
+    margin-top: 20px;
+  }
+  .fw_seminar_schedule .p-schedule__button a {
+    font-size: 16px;
+  }
+  .fw_seminar_schedule .p-schedule__button a {
+    padding: 20px 0;
   }
 }
