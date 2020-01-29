@@ -1,5 +1,74 @@
 @charset "utf-8";
 
+.fw {
+  .p-schedule {
+
+    &__header {
+      &__inner.inner {
+        @include max(s) {
+          display: flex !important;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          figure#logo {
+            width: 30vw !important;
+          }
+          &::after {
+            display: none !important;
+          }
+        }
+      }
+      &__reception-hours {
+        display: none;
+        @include max(s) {
+          display: block;
+          span {
+            display: block;
+            line-height: 1.4;
+            &.lead {
+              font-size: 2.25vw;
+            }
+            &.time {
+              font-size: 2vw;
+            }
+          }
+        }
+      }
+      &__tel-button {
+        @include max(s) {
+          display: none !important;
+        }
+        &__sp {
+          display: none;
+          @include max(s) {
+            display: block;
+
+            a {
+              display: inline-block;
+              padding: 3vw 4vw 2vw;
+              border-radius: 250px;
+              text-decoration: none;
+              color: #FFF;
+              background-image: linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
+              transition: .4s;
+              font-size: 3.2vw;
+              font-weight: bold;
+              &:hover {
+                background-image: linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
+              }
+
+              ruby {
+                > rt {
+                  font-size: 1.4vw;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 .fw_seminar_schedule {
 // ---------------------------------------------------------------------------
 //
