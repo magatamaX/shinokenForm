@@ -458,12 +458,15 @@
     text-align: center;
   }
   .fw_seminar_schedule .p-schedule__talk__text {
-    padding: 20px;
+    padding: 20px 0;
   }
   .fw_seminar_schedule .p-schedule__talk__text {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
+  }
+  .fw_seminar_schedule .p-schedule__talk__description {
+    font-size: 12px;
   }
   .fw_seminar_schedule .p-schedule__request {
     margin: 40px 0;

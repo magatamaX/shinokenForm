@@ -7,97 +7,102 @@ window.____SEMINAR_SCHEDULE_DATA_ARRAY____　= [
   //  special: true | false　黄色いマーカ有無
   // },
   {
-    date: "20191003",
+    date: "20200103",
     start: "19:00",
     end: "21:00"
   },
   {
-    date: "20191009",
+    date: "20200109",
     start: "19:00",
     end: "21:00"
   },
   {
-    date: "20191013",
+    date: "20200113",
     start: "11:00",
     end: "13:00"
   },
   {
-    date: "20191015",
+    date: "20200115",
     start: "19:00",
     end: "21:00"
   },
   {
-    date: "20191019",
+    date: "20200119",
     start: "13:00",
     end: "15:00",
     special: true
   },
   {
-    date: "20191024",
+    date: "20200124",
     start: "19:00",
     end: "21:00",
     special: true
   },
   {
-    date: "20191027",
+    date: "20200127",
     start: "13:00",
     end: "15:00"
   },
   {
-    date: "20191102",
+    date: "20200202",
     start: "13:00",
     end: "15:00"
   },
   {
-    date: "20191106",
+    date: "20200206",
     start: "19:00",
     end: "21:00"
   },
   {
-    date: "20191110",
+    date: "20200210",
     start: "13:00",
     end: "15:00",
     special: true
   },
   {
-    date: "20191113",
+    date: "20200213",
     start: "19:00",
     end: "21:00"
   },
   {
-    date: "20191116",
+    date: "20200216",
     start: "13:00",
     end: "15:00"
   },
   {
-    date: "20191120",
+    date: "20200220",
     start: "19:00",
     end: "21:00"
   },
   {
-    date: "20191123",
+    date: "20200223",
     start: "13:00",
     end: "15:00",
     special: true
   },
   {
-    date: "20191127",
+    date: "20200227",
     start: "19:00",
     end: "21:00"
   },
   {
-    date: "20191205",
+    date: "20200305",
     start: "19:00",
     end: "21:00"
   },
   {
-    date: "20191209",
+    date: "20200309",
     start: "19:00",
     end: "21:00",
     special: true
   },
   {
-    date: "20191227",
+    date: "20200327",
+    start: "19:00",
+    end: "21:00"
+  },
+  {
+    date: "20200427",
     start: "19:00",
     end: "21:00"
   },

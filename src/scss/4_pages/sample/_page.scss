@@ -187,7 +187,7 @@
 
       &__text {
         flex: 0 0 400px;
-        @include pd(0 20px, 20px);
+        @include pd(0 20px, 20px 0);
         @include max(s) {
           flex: 0 0 100%;
         }
@@ -201,7 +201,7 @@
       }
 
       &__description {
-        @include fontSize(14px);
+        @include fontSize(14px, 12px);
         color: $red;
         border: 2px solid $red;
         @include pd(10px);

@@ -49,16 +49,26 @@ const App = () => {
   useEffect(() => {
     if (!!schedule) {
       const months = Object.keys(schedule);
+      const startYearStr =
+        months.length > 0 ? moment(months[0]).format("YYYY年") : "";
       const startMonthStr =
-        months.length > 0 ? moment(months[0]).format("YYYY年M月") : "";
+        months.length > 0 ? moment(months[0]).format("M月") : "";
+      const endYearStr =
+        months.length > 0
+          ? moment(months[months.length - 1]).format("YYYY年")
+          : "";
       const endMonthStr =
         months.length > 0
-          ? moment(months[months.length - 1]).format("YYYY年M月")
+          ? moment(months[months.length - 1]).format("M月")
           : "";
       const targetDom = document.getElementById("seminarPeriod");
       if (targetDom) {
-        targetDom.textContent = `${startMonthStr}${
-          startMonthStr !== endMonthStr ? `～${endMonthStr}` : ""
+        targetDom.textContent = `${startYearStr}${startMonthStr}${
+          startMonthStr !== endMonthStr
+            ? startYearStr !== endYearStr
+              ? `～${endYearStr}${endMonthStr}`
+              : `～${endMonthStr}`
+            : ""
         }`;
       }
     }
