@@ -1,4 +1,9 @@
 @charset "UTF-8";
+.fw#form header {
+  height: auto !important;
+  padding: 10px 0;
+}
+
 .fw .p-schedule__header__inner.inner {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
