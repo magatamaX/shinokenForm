@@ -1,11 +1,76 @@
 @charset "UTF-8";
+.fw .p-schedule__header__inner.inner {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.fw .p-schedule__header__inner.inner figure#logo {
+  width: auto;
+  float: none;
+}
+
+.fw .p-schedule__header__inner.inner::after {
+  display: none !important;
+}
+
+.fw .p-schedule__header__logo-link {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
 
 .fw .p-schedule__header__reception-hours {
-  display: none;
+  display: block;
+  padding-right: 20px;
+}
+
+.fw .p-schedule__header__reception-hours span {
+  display: block;
+  line-height: 1.4;
+}
+
+.fw .p-schedule__header__reception-hours span.lead {
+  font-size: 14px;
+}
+
+.fw .p-schedule__header__reception-hours span.time {
+  font-size: 12px;
 }
 
 .fw .p-schedule__header__tel-button__sp {
-  display: none;
+  display: block;
+}
+
+.fw .p-schedule__header__tel-button__sp a {
+  display: inline-block;
+  padding: 20px 20px 15px;
+  border-radius: 250px;
+  text-decoration: none;
+  color: #FFF;
+  background-image: linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
+  -webkit-transition: .4s;
+  transition: .4s;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.fw .p-schedule__header__tel-button__sp a:hover {
+  background-image: linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
+}
+
+.fw .p-schedule__header__tel-button__sp a ruby > rt {
+  font-size: 11px;
 }
 
 .fw_seminar_schedule .p-schedule {
@@ -420,33 +485,16 @@
 }
 
 @media screen and (max-width: 768px) {
-  .fw .p-schedule__header__inner.inner {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
   .fw .p-schedule__header__inner.inner figure#logo {
-    width: 30vw !important;
+    width: 100% !important;
   }
-  .fw .p-schedule__header__inner.inner::after {
-    display: none !important;
+  .fw .p-schedule__header__logo-link {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 24vw;
+            flex: 0 0 24vw;
   }
   .fw .p-schedule__header__reception-hours {
-    display: block;
-  }
-  .fw .p-schedule__header__reception-hours span {
-    display: block;
-    line-height: 1.4;
+    padding-right: 0;
   }
   .fw .p-schedule__header__reception-hours span.lead {
     font-size: 2.25vw;
@@ -454,26 +502,11 @@
   .fw .p-schedule__header__reception-hours span.time {
     font-size: 2vw;
   }
-  .fw .p-schedule__header__tel-button {
-    display: none !important;
-  }
-  .fw .p-schedule__header__tel-button__sp {
-    display: block;
+  .fw .p-schedule__header__tel-button__sp a {
+    padding: 2vw 4vw 1.5vw;
   }
   .fw .p-schedule__header__tel-button__sp a {
-    display: inline-block;
-    padding: 3vw 4vw 2vw;
-    border-radius: 250px;
-    text-decoration: none;
-    color: #FFF;
-    background-image: linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
-    -webkit-transition: .4s;
-    transition: .4s;
     font-size: 3.2vw;
-    font-weight: bold;
-  }
-  .fw .p-schedule__header__tel-button__sp a:hover {
-    background-image: linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
   }
   .fw .p-schedule__header__tel-button__sp a ruby > rt {
     font-size: 1.4vw;

@@ -5,53 +5,57 @@
 
     &__header {
       &__inner.inner {
-        @include max(s) {
           display: flex !important;
           flex-direction: row;
           justify-content: space-between;
           align-items: center;
           figure#logo {
-            width: 30vw !important;
+            width: auto;
+            float: none;
+            @include max(s) {
+              width: 100% !important;
+            }
           }
           &::after {
             display: none !important;
           }
+      }
+      &__logo-link {
+        flex: 1;
+        @include max(s) {
+          flex: 0 0 24vw;
         }
       }
       &__reception-hours {
-        display: none;
-        @include max(s) {
           display: block;
+          @include pr(20px, 0);
           span {
             display: block;
             line-height: 1.4;
             &.lead {
-              font-size: 2.25vw;
+              @include fontSize(14px, 2.25vw);
             }
             &.time {
-              font-size: 2vw;
+              @include fontSize(12px, 2vw);
             }
           }
-        }
+
       }
       &__tel-button {
-        @include max(s) {
-          display: none !important;
-        }
+
         &__sp {
-          display: none;
-          @include max(s) {
+
             display: block;
 
             a {
               display: inline-block;
-              padding: 3vw 4vw 2vw;
+              @include pd(20px 20px 15px, 2vw 4vw 1.5vw);
               border-radius: 250px;
               text-decoration: none;
               color: #FFF;
               background-image: linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
               transition: .4s;
-              font-size: 3.2vw;
+              @include fontSize(24px, 3.2vw);
               font-weight: bold;
               &:hover {
                 background-image: linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
@@ -59,11 +63,11 @@
 
               ruby {
                 > rt {
-                  font-size: 1.4vw;
+                  @include fontSize(11px, 1.4vw);
                 }
               }
             }
-          }
+
         }
       }
     }
