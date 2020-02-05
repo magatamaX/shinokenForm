@@ -28,55 +28,77 @@
       }
       &__logo-link {
         flex: 1;
+        @include mr(0, 20px);
         @include max(s) {
           flex: 0 0 24vw;
         }
       }
-      &__reception-hours {
-          display: block;
-          @include pr(20px, 0);
-          span {
-            display: block;
-            line-height: 1.4;
-            &.lead {
-              @include fontSize(14px, 2.25vw);
-            }
-            &.time {
-              @include fontSize(12px, 2vw);
-            }
-          }
+    }
+  }
+  a.p-schedule__header__tel-button {
+    @include pd(15px 20px 10px, 2vw 4vw 1.5vw);
+    border-radius: 250px;
+    text-decoration: none;
+    color: #FFF;
+    transition: .4s;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: bold;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffb76b+0,ffa73d+47,ff7c00+51,ff7f04+100 */
+    background: #ffb76b; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ffb76b 0%, #ffa73d 47%, #ff7c00 51%, #ff7f04 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #ffb76b 0%,#ffa73d 47%,#ff7c00 51%,#ff7f04 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #ffb76b 0%,#ffa73d 47%,#ff7c00 51%,#ff7f04 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb76b', endColorstr='#ff7f04',GradientType=0 ); /* IE6-9 */
+    box-shadow: 0 2px 2px rgba(0,0,0,.2), 0 -4px 5px -2px #E27100 inset, 0 2px 6px 3px rgba(255,255,255,.5) inset;
+    
+    flex: 0 0 430px;
+    @include max(s) {
+      flex: 1;
+    }
 
-      }
-      &__tel-button {
+    &:hover {
+      opacity: .8;
+      box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+    }
 
-        &__sp {
+    & > * {
+      flex: 1;
+    }
 
-            display: block;
-
-            a {
-              display: inline-block;
-              @include pd(20px 20px 15px, 2vw 4vw 1.5vw);
-              border-radius: 250px;
-              text-decoration: none;
-              color: #FFF;
-              background-image: linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
-              transition: .4s;
-              @include fontSize(24px, 3.2vw);
-              font-weight: bold;
-              &:hover {
-                background-image: linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
-              }
-
-              ruby {
-                > rt {
-                  @include fontSize(11px, 1.4vw);
-                }
-              }
-            }
-
+    .reception-hours {
+      @include mr(0, 10px);
+      text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+      span {
+        display: block;
+        line-height: 1.4;
+        white-space: nowrap;
+        text-align: center;
+        &.lead {
+          @include fontSize(14px, 2.25vw);
+        }
+        &.time {
+          @include fontSize(12px, 2vw);
         }
       }
     }
+
+    .tel-number {
+      @include fontSize(24px, 3.5vw);
+      font-weight: bold;
+      white-space: nowrap;
+      text-shadow: 0 2px 2px rgba(0,0,0,0.3);
+    }
+
+    ruby {
+      > rt {
+        @include fontSize(11px, 1.4vw);
+      }
+    }
+
+
   }
 }
 .fw_seminar_schedule {

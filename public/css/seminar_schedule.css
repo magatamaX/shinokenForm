@@ -33,48 +33,87 @@
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  margin-right: 0;
 }
 
-.fw .p-schedule__header__reception-hours {
-  display: block;
-  padding-right: 20px;
-}
-
-.fw .p-schedule__header__reception-hours span {
-  display: block;
-  line-height: 1.4;
-}
-
-.fw .p-schedule__header__reception-hours span.lead {
-  font-size: 14px;
-}
-
-.fw .p-schedule__header__reception-hours span.time {
-  font-size: 12px;
-}
-
-.fw .p-schedule__header__tel-button__sp {
-  display: block;
-}
-
-.fw .p-schedule__header__tel-button__sp a {
-  display: inline-block;
-  padding: 20px 20px 15px;
+.fw a.p-schedule__header__tel-button {
+  padding: 15px 20px 10px;
   border-radius: 250px;
   text-decoration: none;
   color: #FFF;
-  background-image: linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
   -webkit-transition: .4s;
   transition: .4s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffb76b+0,ffa73d+47,ff7c00+51,ff7f04+100 */
+  background: #ffb76b;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffb76b), color-stop(47%, #ffa73d), color-stop(51%, #ff7c00), to(#ff7f04));
+  background: linear-gradient(to bottom, #ffb76b 0%, #ffa73d 47%, #ff7c00 51%, #ff7f04 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb76b', endColorstr='#ff7f04',GradientType=0 );
+  /* IE6-9 */
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2), 0 -4px 5px -2px #E27100 inset, 0 2px 6px 3px rgba(255, 255, 255, 0.5) inset;
+          box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2), 0 -4px 5px -2px #E27100 inset, 0 2px 6px 3px rgba(255, 255, 255, 0.5) inset;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 430px;
+          flex: 0 0 430px;
+}
+
+.fw a.p-schedule__header__tel-button:hover {
+  opacity: .8;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.fw a.p-schedule__header__tel-button > * {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.fw a.p-schedule__header__tel-button .reception-hours {
+  margin-right: 0;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.fw a.p-schedule__header__tel-button .reception-hours span {
+  display: block;
+  line-height: 1.4;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.fw a.p-schedule__header__tel-button .reception-hours span.lead {
+  font-size: 14px;
+}
+
+.fw a.p-schedule__header__tel-button .reception-hours span.time {
+  font-size: 12px;
+}
+
+.fw a.p-schedule__header__tel-button .tel-number {
   font-size: 24px;
   font-weight: bold;
+  white-space: nowrap;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
 }
 
-.fw .p-schedule__header__tel-button__sp a:hover {
-  background-image: linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
-}
-
-.fw .p-schedule__header__tel-button__sp a ruby > rt {
+.fw a.p-schedule__header__tel-button ruby > rt {
   font-size: 11px;
 }
 
@@ -494,26 +533,34 @@
     width: 100% !important;
   }
   .fw .p-schedule__header__logo-link {
+    margin-right: 20px;
+  }
+  .fw .p-schedule__header__logo-link {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 24vw;
             flex: 0 0 24vw;
   }
-  .fw .p-schedule__header__reception-hours {
-    padding-right: 0;
-  }
-  .fw .p-schedule__header__reception-hours span.lead {
-    font-size: 2.25vw;
-  }
-  .fw .p-schedule__header__reception-hours span.time {
-    font-size: 2vw;
-  }
-  .fw .p-schedule__header__tel-button__sp a {
+  .fw a.p-schedule__header__tel-button {
     padding: 2vw 4vw 1.5vw;
   }
-  .fw .p-schedule__header__tel-button__sp a {
-    font-size: 3.2vw;
+  .fw a.p-schedule__header__tel-button {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
   }
-  .fw .p-schedule__header__tel-button__sp a ruby > rt {
+  .fw a.p-schedule__header__tel-button .reception-hours {
+    margin-right: 10px;
+  }
+  .fw a.p-schedule__header__tel-button .reception-hours span.lead {
+    font-size: 2.25vw;
+  }
+  .fw a.p-schedule__header__tel-button .reception-hours span.time {
+    font-size: 2vw;
+  }
+  .fw a.p-schedule__header__tel-button .tel-number {
+    font-size: 3.5vw;
+  }
+  .fw a.p-schedule__header__tel-button ruby > rt {
     font-size: 1.4vw;
   }
   .fw_seminar_schedule .p-schedule {
